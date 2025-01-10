@@ -22,7 +22,9 @@ app.get('/proxy', async (req, res) => {
     } catch (error) {
         res.status(500).json({ error: 'Failed to fetch data' });
     }
+    console.log(PORT, url)
 });
+console.log(PORT)
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
