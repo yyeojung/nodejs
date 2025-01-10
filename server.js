@@ -24,7 +24,6 @@ app.get('/proxy', async (req, res) => {
     }
     console.log(PORT, url)
 });
-console.log(PORT)
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
