@@ -6,7 +6,11 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // CORS 설정
-app.use(cors());
+app.use(cors({
+    origin: '*',
+    methods: 'GET',
+    allowedHeaders: ['Content-Type'],
+  }));
 
 // 프록시 엔드포인트
 app.get('/proxy', async (req, res) => {
